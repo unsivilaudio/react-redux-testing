@@ -1,0 +1,4 @@
+export const CREATE_COMMENT = 'CREATE_COMMENT';
+export const DELETE_COMMENT = 'DELETE_COMMENT';
+export const FETCH_COMMENTS = 'FETCH_COMMENTS';
+export const SET_COMMENTS = 'SET_COMMENTS';

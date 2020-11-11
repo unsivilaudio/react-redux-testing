@@ -2,6 +2,8 @@
     margin-top: 2.5rem;
 
     .CommentList__Header {
+        color: #928562;
+        text-shadow: 1px 1px 2px #777;
         font-size: 2.5rem;
         text-transform: uppercase;
         padding: 1.2rem 2.2rem;
@@ -11,14 +13,42 @@
         list-style: none;
 
         .CommentList__ListItem {
-            position: relative;
+            background: #effdf8;
             font-size: 2rem;
             text-transform: italic;
+            padding: 1rem 2.2rem;
+            margin-bottom: 1rem;
+            border-radius: 0.7rem;
 
-            &::before {
-                content: '\2014';
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .CommentList__ListItem--text {
                 position: relative;
-                margin-right: 1rem;
+                &::before {
+                    content: '\2014';
+                    position: relative;
+                    margin-right: 1rem;
+                }
+            }
+
+            &:hover .CommentList__ListItem--remove {
+                width: 1.5rem;
+                opacity: 1;
+            }
+
+            .CommentList__ListItem--remove {
+                display: inline-block;
+                width: 0;
+                overflow: hidden;
+                cursor: pointer;
+                color: #eb796a;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #e44b37;
+                }
             }
         }
     }

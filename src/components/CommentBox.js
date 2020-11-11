@@ -1,4 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { nanoid } from 'nanoid';
+
+import { createComment } from '../actions';
 
 class CommentBox extends React.Component {
     state = { message: '' };
@@ -9,6 +13,10 @@ class CommentBox extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        const { message } = this.state;
+        const id = nanoid();
+        const newComment = { id, message };
+        this.props.createComment(newComment);
         this.setState({ message: '' });
     };
 
@@ -37,4 +45,4 @@ class CommentBox extends React.Component {
     }
 }
 
-export default CommentBox;
+export default connect(null, { createComment })(CommentBox);

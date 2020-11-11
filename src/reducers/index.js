@@ -1,12 +1,8 @@
 import { combineReducers } from 'redux';
+import comments from './commentReducer';
 
 const rootReducer = combineReducers({
-    comments: (
-        state = [
-            'This is a great place',
-            "I can't believe I have not been here before",
-        ]
-    ) => state,
+    comments,
 });
 
 export default rootReducer;
