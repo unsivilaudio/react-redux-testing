@@ -1,0 +1,25 @@
+.CommentList {
+    margin-top: 2.5rem;
+
+    .CommentList__Header {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        padding: 1.2rem 2.2rem;
+    }
+
+    .CommentList__List {
+        list-style: none;
+
+        .CommentList__ListItem {
+            position: relative;
+            font-size: 2rem;
+            text-transform: italic;
+
+            &::before {
+                content: '\2014';
+                position: relative;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

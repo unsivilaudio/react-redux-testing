@@ -5,10 +5,21 @@
     display: flex;
     flex-direction: column;
 
-    .Header {
-        background: #efebe8;
-        padding: 1.2rem 3rem;
-        font-size: 3.5rem;
-        font-weight: 300;
+    .Hero {
+        background: #dad0c9;
+        padding: 1.4rem 3rem;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
+        .Hero__Header {
+            font-size: 3rem;
+            line-height: 1.2;
+            letter-spacing: 0.4rem;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        .Hero__SubText {
+            font-size: 1.6rem;
+        }
     }
 }

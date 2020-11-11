@@ -1,0 +1,57 @@
+.CommentBox {
+    color: #efede8;
+    background: #867e77;
+    margin-top: 2.5rem;
+    padding: 2rem 3.5rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+
+    .CommentBox__Header {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .CommentBox__MessageArea {
+        display: block;
+        font-family: inherit;
+        width: 100%;
+        height: 10rem;
+        border: none;
+        resize: none;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 3rem;
+        border-radius: 1.2rem;
+    }
+
+    .Button {
+        font-size: 1.6rem;
+        font-family: inherit;
+        padding: 0.7rem 1.8rem;
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 2px 7px 3px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            box-shadow: none;
+            transform: translateY(-1px);
+        }
+
+        &.Primary {
+            color: #efe8eb;
+            background: #2fb7ed;
+
+            &:hover {
+                background: #2093c0;
+            }
+        }
+    }
+}
