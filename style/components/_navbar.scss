@@ -3,25 +3,61 @@
     width: 100%;
     margin-bottom: 2.5rem;
 
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .Container {
-        padding: 0 5rem;
+        padding: 1rem 5rem;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .Branding {
-            font-size: 2.5rem;
-            padding: 1rem 0;
+            color: #a1a571;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            font-style: italic;
+            padding: 0;
         }
 
         .List {
             list-style: none;
-            font-size: 2rem;
+            font-size: 1.6rem;
 
             .ListItem {
+                position: relative;
                 cursor: pointer;
+                padding: 0.7rem 1.8rem;
+                font-weight: 700;
                 height: 100%;
+                transition: all 0.5s ease;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    height: 2px;
+                    width: 0;
+                    overflow: hidden;
+                    background: #706755;
+                    transform: translateX(-50%);
+                    transition: all 0.5s ease;
+                    // transform-origin: right center;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+                &:hover {
+                    color: #706755;
+                    // background: rgba(0, 0, 0, 0.3);
+                    // border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+                }
             }
         }
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import NavBar from './ui/NavBar';
 import Footer from './ui/Footer';
@@ -8,7 +9,7 @@ import CommentList from './CommentList';
 export default class App extends Component {
     render() {
         return (
-            <React.Fragment>
+            <BrowserRouter>
                 <NavBar />
                 <div className='App'>
                     <div className='Hero'>
@@ -23,7 +24,7 @@ export default class App extends Component {
                     <CommentList comments={[]} />
                 </div>
                 <Footer />
-            </React.Fragment>
+            </BrowserRouter>
         );
     }
 }
