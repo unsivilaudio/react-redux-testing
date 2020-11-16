@@ -11,9 +11,4 @@ describe('My App Component', () => {
     it('shows a <NavBar/>', () => {
         expect(component).to.have.class('NavBar');
     });
-
-    it('shows a <CommentBox />', () => {
-        // console.log(component);
-        expect(component).to.exist;
-    });
 });

@@ -21,7 +21,7 @@ export default class App extends Component {
                         </p>
                     </div>
                     <CommentBox />
-                    <CommentList comments={[]} />
+                    <CommentList />
                 </div>
                 <Footer />
             </BrowserRouter>

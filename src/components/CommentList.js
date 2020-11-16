@@ -3,13 +3,14 @@ import { connect } from 'react-redux';
 
 import { setComments, fetchComments, deleteComment } from '../actions';
 
-class CommentList extends React.Component {
+export class CommentList extends React.Component {
     componentDidMount() {
         this.props.fetchComments();
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.comments !== this.props.comments) {
+            console.log('<CommentList /> SET_COMMENTS was called.');
             this.props.setComments(this.props.comments);
         }
     }

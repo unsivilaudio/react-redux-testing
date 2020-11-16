@@ -1,12 +1,19 @@
 import { renderComponent, expect } from '../test_helper';
-import CommentList from '../../src/components/CommentList';
+import { CommentList } from '../../src/components/CommentList';
+import { deleteComment, fetchComments, setComments } from '../../src/actions';
 
 describe('My CommentList Component', () => {
     let component;
 
     beforeEach(() => {
-        component = renderComponent(CommentList, null, {
-            comments: ['New Comment', 'Other New Comment'],
+        component = renderComponent(CommentList, {
+            comments: [
+                { id: 123, message: 'New Comment' },
+                { id: 345, message: 'Other New Comment' },
+            ],
+            fetchComments,
+            deleteComment,
+            setComments,
         });
     });
 
