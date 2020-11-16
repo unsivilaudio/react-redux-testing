@@ -20,6 +20,4 @@ describe('My CommentList Component', () => {
     it('shows an LI for each comment', () => {
         expect(component.find('li').length).to.equal(2);
     });
-
-    it('shows each comment that is provided', () => {});
 });

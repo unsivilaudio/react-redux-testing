@@ -13,10 +13,7 @@ const { window } = new JSDOM('<!doctype html><html><body></body></html>');
 global.document = window.document;
 global.window = window;
 global.navigator = global.window.navigator;
-global.localStorage = {
-    getItem: () => [],
-    setItem: () => {},
-};
+
 const $ = _$(window);
 
 chaiJquery(chai, chai.util, $);
