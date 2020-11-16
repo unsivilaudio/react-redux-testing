@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { setComments, fetchComments, deleteComment } from '../actions';
+import { setComments, fetchComments, deleteComment } from '../../actions';
 
 export class CommentList extends React.Component {
     componentDidMount() {

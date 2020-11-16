@@ -49,14 +49,19 @@
                     // transform-origin: right center;
                 }
 
-                &:hover::after {
-                    width: 100%;
-                }
-
                 &:hover {
                     color: #706755;
-                    // background: rgba(0, 0, 0, 0.3);
-                    // border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &.active {
+                    color: #7c2760;
+                    &::after {
+                        background: #7c2760;
+                        width: calc(100% - 3.6rem);
+                    }
                 }
             }
         }

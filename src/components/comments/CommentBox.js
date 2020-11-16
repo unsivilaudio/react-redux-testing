@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { nanoid } from 'nanoid';
 
-import { createComment } from '../actions';
+import { createComment } from '../../actions';
 
 class CommentBox extends React.Component {
     state = { message: '' };

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import NavBar from './ui/NavBar';
 import Footer from './ui/Footer';
-import CommentBox from './CommentBox';
-import CommentList from './CommentList';
+import Comments from './comments/Comments';
+import Landing from './Landing';
 
 export default class App extends Component {
     render() {
@@ -12,16 +12,10 @@ export default class App extends Component {
             <BrowserRouter>
                 <NavBar />
                 <div className='App'>
-                    <div className='Hero'>
-                        <header className='Hero__Header'>
-                            An App All About React Testing
-                        </header>
-                        <p className='Hero__SubText'>
-                            It's a real good time, trust me....
-                        </p>
-                    </div>
-                    <CommentBox />
-                    <CommentList />
+                    <Switch>
+                        <Route path='/comments' component={Comments} />
+                        <Route path='/' component={Landing} />
+                    </Switch>
                 </div>
                 <Footer />
             </BrowserRouter>
